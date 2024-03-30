@@ -1,0 +1,33 @@
+name: frank_video_player
+description: The frank video player that builds on top of the official video_player package by flutter and adds many functionalities.
+version: 1.0.0
+homepage: https://github.com/rwscode/frank_video_player
+
+environment:
+  sdk: ">=2.12.0 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  meta: ^1.7.0
+  video_player_platform_interface: ^5.1.2
+  video_player_web: ^2.0.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  lints: ^1.0.1
+  pedantic: ^1.11.1
+  pigeon: ^3.1.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.lazyarts.vikram.cached_video_player
+        pluginClass: CachedVideoPlayerPlugin
+      ios:
+        pluginClass: CachedVideoPlayerPlugin
+      web:
+        default_package: video_player_web
